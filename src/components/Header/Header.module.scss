@@ -1,0 +1,102 @@
+.logo {
+  font-family: 'Pacifico-Regular';
+}
+
+.navbarNav {
+  position: relative;
+
+  .navLink {
+    display: block;
+    width: 90px;
+    padding: 0 5px;
+    position: relative;
+    z-index: 9;
+    text-align: center;
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    line-height: 2rem;
+    color: var(--bs-nav-link-color);
+    text-decoration: none;
+    background: 0 0;
+    border: 0;
+  }
+
+  .slider {
+      width: 90px;
+      height: 5px;
+      position: absolute;
+      left: 0;
+      top: 30px;
+      background-color: #3498db;
+      z-index: 8;
+  }
+
+  .navLink {
+    & ~ .slider {
+      background-color: transparent;
+      transition-property: background-color, left;
+      transition-duration: 0.4s, 0s;
+      transition-delay: 0s, 0.4s;
+    }
+  }
+
+  .navLink:hover  {
+    & ~ .slider {
+      transition-delay: 0.4s, 0s;
+    }
+  }
+
+  & .navLink:nth-child(1).active {
+    & ~ .slider {
+      left: 0;
+      background-color: #3498db;
+    }
+  }
+
+  .navLink.active {
+    & ~ .slider {
+      transition: left 0.4s, background-color 0.4s;
+    }
+  }
+
+  .navLink.active:hover  {
+    & ~ .slider {
+      transition-delay: 0s, 0s;
+    }
+  }
+
+  & .navLink:nth-child(2).active {
+    & ~ .slider {
+      left: 90px;
+      background-color: #9b59b6;
+    }
+  }
+
+  & .navLink:nth-child(3).active {
+    & ~ .slider {
+      left: 180px;
+      background-color: #16a085;
+    }
+  }
+
+  & .navLink:nth-child(1):hover {
+    & ~ .slider {
+      left: 0;
+      background-color: #3498db;
+    }
+  }
+
+  & .navLink:nth-child(2):hover {
+    & ~ .slider {
+      left: 90px;
+      background-color: #9b59b6;
+    }
+  }
+
+  & .navLink:nth-child(3):hover {
+    & ~ .slider {
+      left: 180px;
+      background-color: #16a085;
+    }
+  }
+}

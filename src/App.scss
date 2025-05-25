@@ -1,0 +1,19 @@
+html {
+  overflow-y: scroll;
+}
+
+@font-face {
+  font-family: 'Pacifico-Regular';
+  src: url('../src/fonts/Pacifico-Regular.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GreatVibes-Regular';
+  src: url('../src/fonts/GreatVibes-Regular.ttf') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}

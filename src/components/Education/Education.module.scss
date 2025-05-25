@@ -1,0 +1,71 @@
+.faculty {
+  // position: relative;
+  // padding-left: 20px;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 11px;
+  //   height: 11px;
+  //   background-color: black;
+  //   border-radius: 50%;
+  //   left: -2px;
+  //   top: 17px;
+  // }
+
+  // &:not(:last-child)::after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 5px;
+  //   height: 35px;
+  //   background-color: black;
+  //   left: 1px;
+  //   top: 27px;
+  // }
+}
+
+.facultyWrapper {
+  display: flex;
+
+  &:not(:last-child) {
+    .content {
+      padding-bottom: 10px;
+    }
+  }
+
+  &:last-child {
+    .line {
+      display: none;
+    }
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25px;
+
+  --shift-timeline-top: 5px;
+
+  .circle {
+    display: inline-block;
+    flex: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--bs-secondary-bg);
+    margin-top: var(--shift-timeline-top);
+  }
+  
+  .line {
+    display: inline-block;
+    width: 4px;
+    height: 100%;
+    background-color: var(--bs-secondary-bg);
+    margin-bottom: calc(var(--shift-timeline-top) * -1);
+  }
+
+  
+}
+
