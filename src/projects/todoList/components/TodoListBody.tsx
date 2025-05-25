@@ -19,7 +19,7 @@ interface TodoListBodyProps {
 
 export const TodoListBody: FC<TodoListBodyProps> = ({ todos, deleteTodo, changeTodo, toggleChecked }) => {
    const cards = useList($todos, (todo) => (
-      <TodoCard key={todo.id} todo={todo} deleteTodo={deleteTodo} changeTodo={changeTodo} toggleChecked={toggleChecked}/>
+      <TodoCard todo={todo} deleteTodo={deleteTodo} changeTodo={changeTodo} toggleChecked={toggleChecked}/>
   ));
 
   return <div>{cards}</div>;

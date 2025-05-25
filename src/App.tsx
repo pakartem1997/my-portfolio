@@ -2,14 +2,14 @@ import { Route, Routes } from "react-router";
 
 import './App.scss';
 import Layout from "./components/Layout";
+import { lazy } from "react";
 import { ROUTES } from "./constants/routes";
-import { Home } from "./pages/Home";
-import { Projects } from "./pages/Projects/Projects";
-import { SiteStack } from "./pages/SiteStack";
-import { NotFound } from "./pages/NotFound";
-import { TodoList } from "./projects/todoList/components/TodoList";
 
-
+const Home = lazy(() => import("./pages/Home").then(module => ({ default: module.Home })));
+const Projects = lazy(() => import("./pages/Projects/Projects").then(module => ({ default: module.Projects})));
+const TodoList = lazy(() => import("./projects/todoList/components/TodoList").then(module => ({ default: module.TodoList })));
+const SiteStack = lazy(() => import("./pages/SiteStack").then(module => ({ default: module.SiteStack })));
+const NotFound = lazy(() => import("./pages/NotFound").then(module => ({ default: module.NotFound })));
 
 function App() {
   return (
