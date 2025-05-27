@@ -5,10 +5,11 @@ import { clsx } from "clsx";
 import { Section } from "@/components/Section/Section";
 import { DisplayMode, DisplayModeToggle } from "@/components/DisplayModeToggle";
 import { projects } from "./projectsData";
-import { Link } from "react-router";
-import { ROUTES } from "@/constants/routes";
+import { useNavigate } from "react-router";
 
 export const Projects = () => {
+  const navigate = useNavigate();
+  
   const [displayMode, setDisplayMode] = useState<DisplayMode>(
     DisplayMode.Table
   );
@@ -87,11 +88,9 @@ export const Projects = () => {
                 <Card.Text className="flex-grow-1">
                   {project.description}
                 </Card.Text>
-                <Button variant="outline-secondary">
-                  <Link to={project.srcProject} className="text-decoration-none text-black">
+                <Button variant="outline-secondary" onClick={() => navigate(project.srcProject)}>
                     Открыть проект
-                  </Link>
-                  </Button>
+                </Button>
               </Card.Body>
             </Card>
           </Col>
