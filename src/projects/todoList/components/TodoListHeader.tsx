@@ -1,6 +1,17 @@
-import { Button, FloatingLabel, Form, InputGroup } from "react-bootstrap";
-import { $descriptionTodo, $titleTodo } from "../effector/store";
-import { addTodo, changeDescriptionTodo, changeTitleTodo } from "../effector/event";
+import {
+  Badge,
+  Button,
+  FloatingLabel,
+  Form,
+  InputGroup,
+  Stack,
+} from "react-bootstrap";
+import { $countOfTasks, $descriptionTodo, $titleTodo } from "../effector/store";
+import {
+  addTodo,
+  changeDescriptionTodo,
+  changeTitleTodo,
+} from "../effector/event";
 import { useUnit } from "effector-react";
 import { ChangeEvent } from "react";
 
@@ -8,12 +19,14 @@ export const TodoListHeader = () => {
   const [
     titleTodo,
     descriptionTodo,
+    countOfTasks,
     addTodoFn,
     changeTitleTodoFn,
     changeDescriptionTodoFn,
   ] = useUnit([
     $titleTodo,
     $descriptionTodo,
+    $countOfTasks,
     addTodo,
     changeTitleTodo,
     changeDescriptionTodo,
@@ -29,7 +42,10 @@ export const TodoListHeader = () => {
 
   return (
     <div>
-      <h2>Todo List 📋</h2>
+      <Stack className="mb-2" direction="horizontal">
+        <h2 className="m-0">Todo List 📋</h2>
+        <div className="ms-auto fs-4">Количество задач: <Badge bg="secondary">{countOfTasks}</Badge></div>
+      </Stack>
       <Form>
         <InputGroup className="mb-3">
           <FloatingLabel controlId="floatingInput" label="Заголовок">
