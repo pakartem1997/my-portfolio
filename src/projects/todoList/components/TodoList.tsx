@@ -1,20 +1,8 @@
-import { useEffect } from "react";
-import { TodoListBody } from "./TodoListBody";
-import { TodoListHeader } from "./TodoListHeader";
-import { startTodoApp } from "../effector/event";
-import { useUnit } from "effector-react";
+import { TodoCard } from "./TodoCard";
+import { useList } from "effector-react";
+import { $todos } from "../effector/store";
 
-export const TodoList = () => {
-  const startTodoAppFn = useUnit(startTodoApp);
-
-  useEffect(() => {
-    startTodoAppFn();
-  }, [startTodoAppFn]);
-
-  return (
-    <>
-      <TodoListHeader />
-      <TodoListBody />
-    </>
-  );
+export const TodoListBody = () => {
+  const cards = useList($todos, (todo) => <TodoCard todo={todo} />);
+  return <div>{cards}</div>;
 };
