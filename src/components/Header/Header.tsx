@@ -66,7 +66,7 @@ export const Header = () => {
             <span className={styles.slider}></span>
           </Nav>
 
-          <div className="d-flex align-items-center gap-3">
+          <div className="d-flex align-items-center gap-1">
             {/* <Button
               variant="outline-secondary"
               className="rounded-circle p-0 d-flex justify-content-center align-items-center mr-5"
