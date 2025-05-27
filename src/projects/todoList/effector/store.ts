@@ -5,7 +5,7 @@ import { addTodo, changeDescriptionTodo, changeTitleTodo, changeTodo, deleteTodo
 export const $todos = restore<Todo[]>(startTodoApp, []);
 export const $titleTodo = createStore<Todo["title"]>("");
 export const $descriptionTodo = createStore<Todo["description"]>("");
-export const $countOfTasks = $todos.map(todos => todos.length);
+export const $countOfTasks = $todos.map(todos => todos.filter((todo) => todo.isChecked === false).length);
 
 $titleTodo.on(changeTitleTodo, (_, title) => title).reset(addTodo);
 $descriptionTodo.on(changeDescriptionTodo, (_, description) => description).reset(addTodo);

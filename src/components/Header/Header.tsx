@@ -11,6 +11,7 @@ import styles from "./Header.module.scss";
 import { clsx } from "clsx";
 import { ROUTES } from "@/constants/routes";
 import { DropdownTheme } from "../DropdownTheme";
+import { LanguageSwitch } from "../LanguageSwitch";
 
 
 export const Header = () => {
@@ -75,6 +76,7 @@ export const Header = () => {
             >
               <MdQuestionMark size={15} />
             </Button> */}
+            {/* <LanguageSwitch/> */}
             <LanguageDropdown />
             {/* <SwitchTheme /> */}
             <DropdownTheme/>
