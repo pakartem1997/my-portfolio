@@ -1,7 +1,7 @@
 import Card from "react-bootstrap/Card";
 import cat from "@/assets/cat.jpg";
 
-import { getAge } from "@/utils";
+import { getAge } from "@/projects/Utils/utils";
 import { Socials } from "./Socials";
 
 export const Profile = () => {

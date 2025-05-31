@@ -58,16 +58,3 @@ export const ExperienceSections = () => {
     </Section>
   );
 };
-
-// <Card style={{ width: "100%" }} as={"section"}>
-//   <Card.Body>
-//     <Card.Title className="fs-2">Опыт работы</Card.Title>
-//     {experiences.map((experience) => (
-//       <ExperienceWork
-//         className="mb-3"
-//         key={experience.name}
-//         {...experience}
-//       />
-//     ))}
-//   </Card.Body>
-// </Card>

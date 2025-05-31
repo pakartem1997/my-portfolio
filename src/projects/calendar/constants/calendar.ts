@@ -1,0 +1,1 @@
+export const TOTAL_DAYS_IN_CALENDAR = 42;

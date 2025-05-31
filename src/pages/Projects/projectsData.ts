@@ -11,7 +11,7 @@ export const projects = [
     projectName: "Календарь",
     description: "Программа, которая помогает структурировать день, неделю и месяц, планировать задачи и не забывать о важных делах",
     imageUrl: "/src/assets/technical-work.jpg",
-    srcProject: ""
+    srcProject: ROUTES.CALENDAR
   },
   {
     projectName: "Прогноз погоды",

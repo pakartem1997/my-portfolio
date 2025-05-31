@@ -68,17 +68,7 @@ export const Header = () => {
           </Nav>
 
           <div className="d-flex align-items-center gap-1">
-            {/* <Button
-              variant="outline-secondary"
-              className="rounded-circle p-0 d-flex justify-content-center align-items-center mr-5"
-              style={{ width: "30px", height: "30px" }}
-              onClick={handleShow}
-            >
-              <MdQuestionMark size={15} />
-            </Button> */}
-            {/* <LanguageSwitch/> */}
             <LanguageDropdown />
-            {/* <SwitchTheme /> */}
             <DropdownTheme/>
           </div>
         </Container>
