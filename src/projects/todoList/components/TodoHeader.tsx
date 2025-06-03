@@ -6,7 +6,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router";
 
 interface TodoListHeaderProps {
-  className: string;
+  className?: string;
 }
 
 export const TodoListHeader: FC<TodoListHeaderProps> = ({ className }) => {
