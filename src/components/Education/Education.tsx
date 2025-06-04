@@ -6,21 +6,21 @@ type faculty = { name: string; period: string };
 interface EducationProps {
   title: string;
   subtitle?: string;
-  facultys: faculty[];
+  faculties: faculty[];
   className?: string;
 }
 
 export const Education: FC<EducationProps> = ({
   title,
   subtitle,
-  facultys,
+  faculties,
   className,
 }) => {
   return (
     <div className={className}>
       <h4>{title}</h4>
       <p className="text-body-secondary">{subtitle}</p>
-      {facultys.map(({ name, period }, index) => (
+      {faculties.map(({ name, period }, index) => (
         <div key={index} className={styles.facultyWrapper}>
           <div className={styles.timeline}>
             <span className={styles.circle}></span>

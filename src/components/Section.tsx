@@ -1,5 +1,4 @@
 import { FC, ReactNode } from "react";
-import styles from "./Section.module.scss";
 import { clsx } from "clsx";
 
 interface SectionProps {
@@ -14,7 +13,6 @@ export const Section: FC<SectionProps> = ({
   title,
   children,
   border = false,
-  color,
   getRightComponent,
 }) => {
   return (
@@ -23,8 +21,6 @@ export const Section: FC<SectionProps> = ({
         <h2
           className={clsx(
             "border-bottom border-2 pb-1",
-            styles.title,
-            color && styles[color]
           )}
         >
           {title}

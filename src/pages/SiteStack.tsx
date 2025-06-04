@@ -1,4 +1,4 @@
-import { Section } from "@/components/Section/Section";
+import { Section } from "@/components/Section";
 import { ListGroup } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 

@@ -3,8 +3,9 @@ import INP from "@/assets/INP.jpg";
 import v2grupp from "@/assets/v2grupp.jpg";
 import kontur from "@/assets/kontur.jpg";
 import NSU from "@/assets/NSU.jpg";
-import { Section } from "@/components/Section/Section";
+
 import styles from "./ExperienceSections.module.scss";
+import { Section } from "../Section";
 
 export const ExperienceSections = () => {
   const experiences = [

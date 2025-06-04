@@ -37,5 +37,5 @@ export const DisplayModeToggle: React.FC<DisplayModeToggleProps> = ({
       </ButtonGroup>
   );
 };
-
 export { DisplayMode };
+

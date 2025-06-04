@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import { Button, Col, Form, Row, Stack } from "react-bootstrap";
 import { clsx } from "clsx";
-import { Section } from "@/components/Section/Section";
+import { Section } from "@/components/Section";
 import { DisplayMode, DisplayModeToggle } from "@/components/DisplayModeToggle";
 import { projects } from "./projectsData";
 import { useNavigate } from "react-router";
