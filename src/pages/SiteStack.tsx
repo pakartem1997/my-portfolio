@@ -1,4 +1,4 @@
-import { Section } from "@/components/Section";
+import { Section } from "@/components/Section/Section";
 import { ListGroup } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 
@@ -21,29 +21,39 @@ const stack = [
 export const SiteStack = () => {
   return (
     <>
-      <Section title="О сайте">
-        <p className="fs-4">
-          Этот сайт-портфолио создан для демонстрации моих навыком и знаний в
-          разработке <b>React</b> приложений.
-          <br />
-          На сайте продемонстрированы мои пет-проекты с описанием технологий,
-          которые использовались для их создания.
-          <br />Я надеюсь, что этот сайт даст вам представление о моих знаниях,
-          возможностях и поможет вам в оценке моих навыков.
-        </p>
+      <Section>
+        <Section.Header className="mb-1">
+          <Section.Title>О сайте</Section.Title>
+        </Section.Header>
+        <Section.Body>
+          <p className="fs-4">
+            Этот сайт-портфолио создан для демонстрации моих навыком и знаний в
+            разработке <b>React</b> приложений.
+            <br />
+            На сайте продемонстрированы мои пет-проекты с описанием технологий,
+            которые использовались для их создания.
+            <br />Я надеюсь, что этот сайт даст вам представление о моих
+            знаниях, возможностях и поможет вам в оценке моих навыков.
+          </p>
+        </Section.Body>
       </Section>
-      <Section title="Используемые технологии на сайте">
-        <ListGroup className="fs-5" as="ol">
-          {stack.map((s, index) => (
-            <ListGroup.Item key={s.id} as="li">
-              <div className="d-inline-flex align-items-center gap-1">
-                {index + 1}.
-                <Image src={s.imgSrc} height={20} width={20} />
-                {s.name}
-              </div>
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
+      <Section>
+        <Section.Header className="mb-3">
+          <Section.Title>Используемые технологии на сайте</Section.Title>
+        </Section.Header>
+        <Section.Body>
+          <ListGroup className="fs-5" as="ol">
+            {stack.map((s, index) => (
+              <ListGroup.Item key={s.id} as="li">
+                <div className="d-inline-flex align-items-center gap-1">
+                  {index + 1}.
+                  <Image src={s.imgSrc} height={20} width={20} />
+                  {s.name}
+                </div>
+              </ListGroup.Item>
+            ))}
+          </ListGroup>
+        </Section.Body>
       </Section>
     </>
   );

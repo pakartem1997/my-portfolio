@@ -5,7 +5,7 @@ import kontur from "@/assets/kontur.jpg";
 import NSU from "@/assets/NSU.jpg";
 
 import styles from "./ExperienceSections.module.scss";
-import { Section } from "../Section";
+import { Section } from "../Section/Section";
 
 export const ExperienceSections = () => {
   const experiences = [
@@ -48,7 +48,7 @@ export const ExperienceSections = () => {
   ];
 
   return (
-    <Section title="Опыт работы" border color="blue">
+    <Section border>
       {experiences.map((experience) => (
         <ExperienceWork
           className={styles.experienceWork}
