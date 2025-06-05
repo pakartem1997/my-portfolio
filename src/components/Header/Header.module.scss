@@ -1,6 +1,8 @@
 .logo {
-  font-family: 'Pacifico-Regular';
+  font-family: "Pacifico-Regular";
 }
+
+$colors: #3498db, #9b59b6, #16a085;
 
 .navbarNav {
   position: relative;
@@ -19,84 +21,58 @@
     text-decoration: none;
     background: 0 0;
     border: 0;
-  }
 
-  .slider {
-      width: 90px;
-      height: 5px;
-      position: absolute;
-      left: 0;
-      top: 30px;
-      background-color: #3498db;
-      z-index: 8;
-  }
-
-  .navLink {
     & ~ .slider {
       background-color: transparent;
       transition-property: background-color, left;
       transition-duration: 0.4s, 0s;
       transition-delay: 0s, 0.4s;
     }
-  }
 
-  .navLink:hover  {
-    & ~ .slider {
-      transition-delay: 0.4s, 0s;
+    &:hover {
+      & ~ .slider {
+        transition-delay: 0.4s, 0s;
+      }
+    }
+
+    &.active {
+      & ~ .slider {
+        transition: left 0.4s, background-color 0.4s;
+      }
+    }
+
+    &.active:hover {
+      & ~ .slider {
+        transition-delay: 0s, 0s;
+      }
     }
   }
 
-  & .navLink:nth-child(1).active {
-    & ~ .slider {
-      left: 0;
-      background-color: #3498db;
+  .slider {
+    width: 90px;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    background-color: #3498db;
+    z-index: 8;
+  }
+
+  @for $i from 1 through 3 {
+    & .navLink:nth-child(#{$i}).active {
+      & ~ .slider {
+        left: ($i - 1) * 90px;
+        background-color: nth($colors, $i);
+      }
     }
   }
 
-  .navLink.active {
-    & ~ .slider {
-      transition: left 0.4s, background-color 0.4s;
-    }
-  }
-
-  .navLink.active:hover  {
-    & ~ .slider {
-      transition-delay: 0s, 0s;
-    }
-  }
-
-  & .navLink:nth-child(2).active {
-    & ~ .slider {
-      left: 90px;
-      background-color: #9b59b6;
-    }
-  }
-
-  & .navLink:nth-child(3).active {
-    & ~ .slider {
-      left: 180px;
-      background-color: #16a085;
-    }
-  }
-
-  & .navLink:nth-child(1):hover {
-    & ~ .slider {
-      left: 0;
-      background-color: #3498db;
-    }
-  }
-
-  & .navLink:nth-child(2):hover {
-    & ~ .slider {
-      left: 90px;
-      background-color: #9b59b6;
-    }
-  }
-
-  & .navLink:nth-child(3):hover {
-    & ~ .slider {
-      left: 180px;
-      background-color: #16a085;
+  @for $i from 1 through 3 {
+    & .navLink:nth-child(#{$i}):hover {
+      & ~ .slider {
+        left: ($i - 1) * 90px;
+        background-color: nth($colors, $i);
+      }
     }
   }
 }
