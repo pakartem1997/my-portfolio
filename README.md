@@ -1,5 +1,9 @@
 # React + TypeScript + Vite
 
+1. npm install - установка зависимостей
+2. npm run dev - запуск проекта
+3. npx json-server src/fakeServer/db.json5 - для запуска json-server
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
