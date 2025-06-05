@@ -5,7 +5,7 @@ export const ProjectNavigation = () => {
   const location = useLocation();
   const pathname = location.pathname;
   const pathnames = pathname.split("/").filter((path) => path !== "");
-  console.log(pathnames);
+
   return (
     <Breadcrumb>
       {pathnames.map((pathname) => (

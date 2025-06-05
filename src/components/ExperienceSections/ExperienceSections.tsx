@@ -49,13 +49,18 @@ export const ExperienceSections = () => {
 
   return (
     <Section border>
-      {experiences.map((experience) => (
-        <ExperienceWork
-          className={styles.experienceWork}
-          key={experience.name}
-          {...experience}
-        />
-      ))}
+      <Section.Header className="mb-2">
+        <Section.Title>Опыт работы</Section.Title>
+      </Section.Header>
+      <Section.Body>
+        {experiences.map((experience) => (
+          <ExperienceWork
+            className={styles.experienceWork}
+            key={experience.name}
+            {...experience}
+          />
+        ))}
+      </Section.Body>
     </Section>
   );
 };

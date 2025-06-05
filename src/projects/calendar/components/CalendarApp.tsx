@@ -1,18 +1,16 @@
 import "dayjs/locale/ru";
-import { CalendarWeekdays } from "./CalendarWeekdays";
 import { CalendarBody } from "./CalendarBody";
-import { CalendarNavigator } from "./CalendarNavigator";
 import { Section } from "@/components/Section/Section";
+import { CalendarHeader } from "./CalendarHeader";
 
 export const CalendarApp = () => {
   return (
     <Section>
-      <Section.Header backButton>
+      <Section.Header className="mb-3" backButton>
         <Section.Title>Календарь 🗓️</Section.Title>
       </Section.Header>
       <Section.Body>
-        <CalendarNavigator />
-        <CalendarWeekdays className="mb-2" />
+        <CalendarHeader />
         <CalendarBody />
       </Section.Body>
     </Section>

@@ -1,7 +1,6 @@
 import { Education } from "./Education/Education";
 import { Section } from "./Section/Section";
 
-
 export const EducationSection = () => {
   const educations = [
     {
@@ -32,10 +31,14 @@ export const EducationSection = () => {
 
   return (
     <Section border>
-      {educations.map((education) => (
-        <Education className="mb-3" key={education.title} {...education} />
-      ))}
+      <Section.Header className="mb-2">
+        <Section.Title>Образование</Section.Title>
+      </Section.Header>
+      <Section.Body>
+        {educations.map((education) => (
+          <Education className="mb-3" key={education.title} {...education} />
+        ))}
+      </Section.Body>
     </Section>
   );
 };
-

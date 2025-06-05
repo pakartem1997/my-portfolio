@@ -3,6 +3,7 @@ import { FC } from "react";
 import { Stack } from "react-bootstrap";
 import { IoMdArrowRoundDown, IoMdArrowRoundUp } from "react-icons/io";
 import { ButtonControl } from "./ButtonControl";
+import { FormattedDate } from "./FormattedDate";
 
 interface DateControlProps {
   handlePreviousPeriod: () => void;
@@ -27,9 +28,7 @@ export const DateControl: FC<DateControlProps> = ({
       <ButtonControl onClick={handleNextPeriod}>
         <IoMdArrowRoundDown />
       </ButtonControl>
-      <h2 className="text-center text-700 fs-1">
-        {currentDate.format(format)}
-      </h2>
+      <FormattedDate>{currentDate.format(format)}</FormattedDate>
     </Stack>
   );
 };
